@@ -8,9 +8,9 @@ export default function App() {
     <>
       <button
         type="button"
+        name="Generate"
         onClick={() => setColor(randomColor())}
         className="generateButton"
-        autoFocus="true"
       >
         Generate
       </button>
