@@ -1,31 +1,23 @@
 import './App.css';
 import randomColor from 'randomcolor';
-
-// import logo from './logo.svg';
-
-// import myRandomColor from './myRandomColor';
+import { useState } from 'react';
 
 export default function App() {
-  let color = randomColor();
-  // console.log(color);
+  const [color, setColor] = useState(randomColor());
   return (
     <>
       <button
         type="button"
-        onClick={() =>
-          randomColor({
-            hue: 'blue',
-          })
-        }
+        onClick={() => setColor(randomColor())}
         className="generateButton"
+        autoFocus="true"
       >
         Generate
       </button>
       <div className="colorBox" style={{ backgroundColor: color }}>
-        {color}
+        Generated Color:
+        <br /> <strong>{color}</strong>
       </div>
-
-      {/* <myRandomColor /> */}
     </>
   );
 }
