@@ -14,8 +14,7 @@ export default function App() {
         Generate
       </button>
       <div className="colorBox" style={{ backgroundColor: color }}>
-        Generated Color:
-        <br /> <strong>{color}</strong>
+        Generated Color: {color}
       </div>
     </>
   );
